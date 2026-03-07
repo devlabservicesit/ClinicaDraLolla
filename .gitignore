@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Arquivos de ambiente
+.env
+
+# Sessões de bots
+session/
+sessions/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
