@@ -6,11 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusFRM/BOT-ZAP.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MatheusFRM/BOT-ZAP/issues"
+  },
+  "homepage": "https://github.com/MatheusFRM/BOT-ZAP#readme",
   "dependencies": {
-    "@whiskeysockets/baileys": "^7.0.0-rc.9",
-    "qrcode-terminal": "^0.12.0"
+    "axios": "^1.13.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
   }
 }
