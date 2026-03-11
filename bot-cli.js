@@ -17,9 +17,9 @@ function procedimentos() {
 
 function localizacao() {
   console.log("\n📍 Estamos localizados em Recife.");
-  console.log("https://maps.google.com");
+  console.log("Segundo andar Próximo a recepção")
+  console.log("Segue Link do endereço: https://shre.ink/ATkR");
 }
-
 function agendamento() {
   const nome = readline.question("\nInforme seu nome: ");
   const dia = readline.question("Melhor dia para consulta: ");
