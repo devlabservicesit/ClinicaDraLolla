@@ -16,13 +16,231 @@
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Popup de Contato */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .popup-overlay.active {
+            display: flex;
+        }
+
+        .popup-container {
+            background: #fff;
+            border-radius: 16px;
+            max-width: 450px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+            position: relative;
+            animation: popupSlideIn 0.3s ease;
+        }
+
+        @keyframes popupSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #777;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .popup-close:hover {
+            color: #B8860B;
+        }
+
+        .popup-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .popup-title {
+            font-size: 1.5rem;
+            color: #B8860B;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .popup-subtitle {
+            color: #777;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .popup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .popup-input {
+            padding: 14px 18px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Lato', sans-serif;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .popup-input:focus {
+            outline: none;
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px #FAF3E3;
+        }
+
+        .popup-btn {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .popup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        .popup-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .popup-divider::before,
+        .popup-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #E0E0E0;
+        }
+
+        .popup-divider span {
+            padding: 0 15px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .popup-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .popup-whatsapp:hover {
+            background: #20BD5A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        .popup-note {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 15px;
+        }
+
+        .popup-skip {
+            display: block;
+            margin-top: 15px;
+            color: #777;
+            font-size: 0.85rem;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .popup-skip:hover {
+            color: #B8860B;
+        }
+    </style>
 </head>
 <body>
+    <!-- Popup de Contato -->
+    <div class="popup-overlay" id="contactPopup">
+        <div class="popup-container">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h2 class="popup-title">Fale Conosco</h2>
+            <p class="popup-subtitle">
+                Preencha seu contato para receber informações exclusivas sobre nossos tratamentos.
+            </p>
+            
+            <form class="popup-form" onsubmit="saveContact(event)">
+                <input type="email" class="popup-input" placeholder="Seu melhor e-mail" required>
+                <button type="submit" class="popup-btn">
+                    <i class="fas fa-paper-plane"></i> Receber Informações
+                </button>
+            </form>
+            
+            <div class="popup-divider"><span>ou</span></div>
+            
+            <a href="https://wa.me/558187972520" class="popup-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+            
+            <p class="popup-note">Prometemos não enviar spam. Seu contato está seguro.</p>
+            <span class="popup-skip" onclick="closePopup()">Agora não, obrigado</span>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-inner">
             <a href="index.html" class="logo">
-                <div class="logo-icon">L</div>
+                <img src="imagens/foto-perfil.jpeg" alt="Dra. Lolla" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                 <div class="logo-text">
                     Dra. Lolla
                     <span>Clínica de Estética</span>
@@ -33,7 +251,6 @@
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="sobre.html" class="nav-link">Sobre</a>
                 <a href="servicos.html" class="nav-link">Serviços</a>
-                <a href="agendamento.html" class="nav-link">Agendamento</a>
             </nav>
             
             <div class="menu-toggle" id="menuToggle">
@@ -59,10 +276,6 @@
                     proporcionar resultados naturais e deslumbrantes.
                 </p>
                 <div class="hero-buttons">
-                    <a href="agendamento.html" class="btn btn-primary">
-                        <i class="fas fa-calendar-alt"></i>
-                        Agendar Consulta
-                    </a>
                     <a href="servicos.html" class="btn btn-secondary">
                         <i class="fas fa-spa"></i>
                         Ver Serviços
@@ -102,93 +315,63 @@
             </p>
             
             <div class="services-grid">
-                <!-- Service 1 - Principal -->
+                <!-- Service 1 - Harmonização -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-gem"></i>
                     </div>
-                    <h3 class="service-title">Harmonização Glútea</h3>
+                    <h3 class="service-title">Harmonização</h3>
                     <p class="service-description">
-                        Procedimento especializado para definição e aumento dos glúteos, 
-                        utilizando técnicas avançadas e produtos de alta qualidade.
+                        Procedimentos revolucionários para proporcionar volume, 
+                        projeção e definição corporal e facial.
                     </p>
                     <a href="servicos.html" class="service-link">
-                       Saiba mais <i class="fas fa-arrow-right"></i>
+                      Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
-                <!-- Service 2 -->
+                <!-- Service 2 - Tratamentos Corporais -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-syringe"></i>
                     </div>
-                    <h3 class="service-title">Preenchimento</h3>
+                    <h3 class="service-title">Tratamentos Corporais</h3>
                     <p class="service-description">
-                        Preenchimento labial, malar e mandibular para proporcionar 
-                        volume e definição Facial harmoniosa.
+                        Procedimentos especializados para modelar o corpo, reduzir 
+                        medidas e melhorar a aparência da pele.
                     </p>
                     <a href="servicos.html" class="service-link">
-                       Saiba mais <i class="fas fa-arrow-right"></i>
+                      Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
-                <!-- Service 3 -->
+                <!-- Service 3 - Tecnologias -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-face-grin-stars"></i>
                     </div>
-                    <h3 class="service-title">Botox</h3>
+                    <h3 class="service-title">Tecnologias Avançadas</h3>
                     <p class="service-description">
-                        Aplicação de toxina botulínica para suavizar rugas e linhas 
-                        de expressão, proporcionando um aspecto rejuvenescido.
+                        Equipamentos de última geração e técnicas inovadoras para 
+                        proporcionar os melhores resultados.
                     </p>
                     <a href="servicos.html" class="service-link">
-                       Saiba mais <i class="fas fa-arrow-right"></i>
+                      Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
-                <!-- Service 4 -->
+                <!-- Service 4 - Protocolos -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-seedling"></i>
                     </div>
-                    <h3 class="service-title">Tratamentos Corporais</h3>
+                    <h3 class="service-title">Protocolos Exclusivos</h3>
                     <p class="service-description">
-                        Drenagem linfática, sculpt e outros tratamentos para 
-                        modelar o corpo e melhorar a circulação.
+                        Tratamentos personalizados desenvolvidos especificamente 
+                        para as necessidades únicas de cada cliente.
                     </p>
                     <a href="servicos.html" class="service-link">
-                       Saiba mais <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-face-laugh-beam"></i>
-                    </div>
-                    <h3 class="service-title">Limpeza de Pele</h3>
-                    <p class="service-description">
-                        Tratamento profundo para remoção de impurezas, 
-                        cravos e manchas, promovendo pele radiante.
-                    </p>
-                    <a href="servicos.html" class="service-link">
-                       Saiba mais <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wand-magic-sparkles"></i>
-                    </div>
-                    <h3 class="service-title">Skinbooster</h3>
-                    <p class="service-description">
-                        Hidratação profunda da pele com ácido hialurônico, 
-                        para luminosidade e viço natural.
-                    </p>
-                    <a href="servicos.html" class="service-link">
-                       Saiba mais <i class="fas fa-arrow-right"></i>
+                      Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -201,7 +384,7 @@
             <div class="about-grid">
                 <div class="about-image">
                     <div class="about-image-main">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=500&fit=crop" alt="Dra. Lolla - Clínica de Estética">
+                        <img src="imagens/foto-principal.jpeg" alt="Dra. Lolla - Clínica de Estética">
                     </div>
                     <div class="about-image-accent">L</div>
                 </div>
@@ -211,7 +394,7 @@
                     <h2 class="about-title">Beleza e Bem-estar em Primeiro Lugar</h2>
                     <p class="about-text">
                         Na clínica Dra. Lolla, acreditamos que cada pessoa merece 
-                        sentir-se confiante e beautiful em sua própria pele. Nossa equipe 
+                        sentir-se confiante em sua própria pele. Nossa equipe 
                         altamente qualificada combina expertise técnica com um atendimento 
                         humanizado e personalizado.
                     </p>
@@ -263,7 +446,7 @@
                     <p class="testimonial-text">
                         "Eu sempre quis fazer harmonização glútea, mas tinha muito medo. 
                         A Dra. Lolla me passou toda segurança desde a primeira consulta. 
-                        O resultado ficounatural esuper bonito!"
+                        O resultado ficou natural e super bonito!"
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">MR</div>
@@ -276,7 +459,7 @@
                 
                 <div class="testimonial-card">
                     <p class="testimonial-text">
-                        "Atendimento impecável! A clínica é linda, super limpia e aconchegante. 
+                        "Atendimento impecável! A clínica é linda, super limpa e aconchegante. 
                         A Dra. Lolla é muito atenciosa e explica todo o procedimento. 
                         Recomendo para todas as minhas amigas."
                     </p>
@@ -292,33 +475,17 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">
                         "Fiz vários tratamentos na clínica e sempre amei os resultados. 
-                        O Botox ficou perfeito, nem parece que fiz! Agora estou fazendo 
-                        o tratamento corporal e já vejo diferença."
+                        Agora estou fazendo o tratamento corporal e já vejo diferença."
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">JL</div>
                         <div class="testimonial-info">
                             <h4>Juliana Lima</h4>
-                            <span>Botox + Tratamento Corporal</span>
+                            <span>Tratamento Corporal</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2 class="cta-title">Pronta para Transformar sua Beleza?</h2>
-            <p class="cta-subtitle">
-                Agende sua consulta agora e descubra como podemos realçar sua 
-                beleza natural com tratamentos personalizados.
-            </p>
-            <a href="agendamento.html" class="btn btn-outline">
-                <i class="fas fa-whatsapp"></i>
-                Falar no WhatsApp
-            </a>
         </div>
     </section>
 
@@ -333,12 +500,11 @@
                     </div>
                     <p class="footer-description">
                         Clínica de estética especializada em harmonização glútea e 
-                        procedimentos estéticos de alta qualidade. Seu belleza 
+                        procedimentos estéticos de alta qualidade. Seu beleza 
                         e bem-estar é nossa prioridade.
                     </p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/esteticadonalolla/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -349,17 +515,16 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sobre.html">Sobre Nós</a></li>
                         <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="agendamento.html">Agendamento</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4 class="footer-title">Serviços</h4>
                     <ul>
-                        <li><a href="servicos.html">Harmonização Glútea</a></li>
-                        <li><a href="servicos.html">Preenchimento</a></li>
-                        <li><a href="servicos.html">Botox</a></li>
+                        <li><a href="servicos.html">Harmonização</a></li>
                         <li><a href="servicos.html">Tratamentos Corporais</a></li>
+                        <li><a href="servicos.html">Tecnologias</a></li>
+                        <li><a href="servicos.html">Protocolos</a></li>
                     </ul>
                 </div>
                 
@@ -367,11 +532,11 @@
                     <h4 class="footer-title">Contato</h4>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Rua Exemplo, 123 - Centro<br>Cidade - Estado</span>
+                        <span>Rua Barão de Souza Leão, 195<br>Recife - Pernambuco</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>(11) 99999-9999</span>
+                        <span>(81) 8797-2520</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
@@ -386,8 +551,32 @@
         </div>
     </footer>
 
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/558187972520" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Scripts -->
     <script src="script.js"></script>
+    
+    <script>
+        // Popup de Contato - Aparece toda vez que o usuário entra no site
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('contactPopup').classList.add('active');
+            }, 3000); // Mostra após 3 segundos
+        });
+
+        function closePopup() {
+            document.getElementById('contactPopup').classList.remove('active');
+        }
+
+        function saveContact(event) {
+            event.preventDefault();
+            alert('Obrigado! Em breve entraremos em contato com você.');
+            closePopup();
+        }
+    </script>
 </body>
 </html>
 
