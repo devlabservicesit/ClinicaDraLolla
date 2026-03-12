@@ -6,8 +6,8 @@
 /* ===== VARIÁVEIS DE CORES ===== */
 :root {
     /* Dourado Luxo - Paleta Exata */
---gold-primary: #FFB300;
---gold-dark: #e8bd00;
+--gold-primary: #FAD5A5;
+--gold-dark: #E8B923;
     --gold-light: #E8D5A3;
     --gold-pale: #F8F1DC;
     --gold-glow: rgba(218, 165, 32, 0.25);
