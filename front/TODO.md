@@ -1,11 +1,1 @@
-# Refatoração Visual Dra. Lolla - Plano Aprovado
-Status: ✅ Iniciado
-
-## Passos:
-- [x] 1. Criar TODO.md (rastreio)
-- [x] 2. Editar styles.css (fade-in CSS, popup integration, gold glows extra)
-- [ ] 3. Editar index.html (remover inline CSS popup, fix typo footer)
-- [ ] 4. Testar visual (abrir páginas, scroll/mobile/hovers)
-- [ ] 5. Finalizar (attempt_completion)
-
-Atualização: Próximo passo = styles.css edits.
+# TODO: Remove Email/WhatsApp Popup\n\nApproved Plan Steps:\n\n## 1. Edit index.html (Remove popup HTML, inline styles, inline script)\n- [ ] Remove <div class=\"popup-overlay\" id=\"contactPopup\">...</div>\n- [ ] Remove <style> /* Popup de Contato */ ... </style>\n- [ ] Remove trailing <script> // Popup de Contato ... </script>\n\n## 2. Edit styles.css (Remove popup styles section)\n- [ ] Remove from `/* Popup Styles (moved from index.html inline) */` to end of `.popup-skip:hover {}`\n\n## 3. Test\n- [ ] Verify no popup on index.html load\n- [ ] Check other pages clean\n\n## 4. Mark complete

@@ -212,35 +212,7 @@
     </style>
 </head>
 <body>
-    <!-- Popup de Contato -->
-    <div class="popup-overlay" id="contactPopup">
-        <div class="popup-container">
-            <button class="popup-close" onclick="closePopup()">&times;</button>
-            <div class="popup-icon">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <h2 class="popup-title">Fale Conosco</h2>
-            <p class="popup-subtitle">
-                Preencha seu contato para receber informações exclusivas sobre nossos tratamentos.
-            </p>
-            
-            <form class="popup-form" onsubmit="saveContact(event)">
-                <input type="email" class="popup-input" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="popup-btn">
-                    <i class="fas fa-paper-plane"></i> Receber Informações
-                </button>
-            </form>
-            
-            <div class="popup-divider"><span>ou</span></div>
-            
-            <a href="https://wa.me/558187972520" class="popup-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-            </a>
-            
-            <p class="popup-note">Prometemos não enviar spam. Seu contato está seguro.</p>
-            <span class="popup-skip" onclick="closePopup()">Agora não, obrigado</span>
-        </div>
-    </div>
+
 
     <!-- Header -->
     <header class="header" id="header">
@@ -565,24 +537,7 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     
-    <script>
-        // Popup de Contato - Aparece toda vez que o usuário entra no site
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                document.getElementById('contactPopup').classList.add('active');
-            }, 3000); // Mostra após 3 segundos
-        });
 
-        function closePopup() {
-            document.getElementById('contactPopup').classList.remove('active');
-        }
-
-        function saveContact(event) {
-            event.preventDefault();
-            alert('Obrigado! Em breve entraremos em contato com você.');
-            closePopup();
-        }
-    </script>
 </body>
 </html>
 
