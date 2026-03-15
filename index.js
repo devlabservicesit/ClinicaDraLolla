@@ -1,9 +1,15 @@
 const express = require("express");
 const axios = require("axios");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
+
+// Configura o servidor para entregar os arquivos da pasta 'front' (HTML, CSS, Imagens)
+app.use(express.static(path.join(__dirname, "front")));
+// Fallback: Tenta encontrar 'assets' na raiz do projeto caso não esteja dentro de 'front'
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 const TOKEN = process.env.TOKEN;
 const PHONE_NUMBER_ID = process.env.PHONE_NUMBER_ID;

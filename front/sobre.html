@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="imagens/foto-principal.jpeg" rel="icon">
+    <link href="assets/images/foto-principal.jpeg" rel="icon">
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -21,7 +21,7 @@
     <header class="header" id="header">
         <div class="header-inner">
             <a href="index.html" class="logo">
-                <img src="imagens/foto-perfil.jpeg" alt="Dra. Lolla" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                <img src="assets/images/foto-perfil.jpeg" alt="Dra. Lolla" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                 <div class="logo-text">
                     Dra. Lolla
                     <span>Clínica de Estética</span>
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="about-full-grid">
                 <div class="about-full-image">
-                    <img src="imagens/foto-principal.jpeg" alt="Dra. Lolla - Clínica de Estética">
+                    <img src="assets/images/foto-principal.jpeg" alt="Dra. Lolla - Clínica de Estética">
                     <div class="about-full-badge">
                         <span>5+</span>
                         <small>Anos de Experiência</small>
@@ -262,11 +262,45 @@
     </footer>
 
     <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/+558187972520" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/558187972520" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Popup Promocional -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div class="popup-icon">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h3 class="popup-title">Ganhe uma Avaliação!</h3>
+            <p class="popup-subtitle">
+                Cadastre-se agora e ganhe uma avaliação gratuita para Harmonização Glútea com a Dra. Lolla.
+            </p>
+            
+            <form class="popup-form" id="popupForm">
+                <input type="text" class="popup-input" placeholder="Seu Nome" required>
+                <input type="tel" class="popup-input" placeholder="Seu WhatsApp" required>
+                <button type="submit" class="popup-btn">Quero Ganhar</button>
+            </form>
+            
+            <div class="popup-divider">
+                <span>OU</span>
+            </div>
+            
+            <a href="https://wa.me/558187972520" class="popup-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                Falar no WhatsApp
+            </a>
+            
+            <div class="popup-note">
+                *Oferta por tempo limitado.
+            </div>
+            <span class="popup-skip" id="popupSkip">Não tenho interesse agora</span>
+        </div>
+    </div>
+
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
