@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa todas as funcionalidades
     initHeader();
     initMobileMenu();
+    initPopup();
     initFormSubmission();
     initSmoothScroll();
+    initPhoneMask();
 });
 
 /**
@@ -28,6 +30,79 @@ function initHeader() {
     }
 }
 
+/**
+ * Popup Promocional
+ */
+function initPopup() {
+    const popup = document.getElementById('popupOverlay');
+    const closeBtn = document.getElementById('popupClose');
+    const skipBtn = document.getElementById('popupSkip');
+    const form = document.getElementById('popupForm');
+
+    // Verifica se o popup existe e se já não foi fechado nesta sessão
+    if (popup && !sessionStorage.getItem('popupClosed')) {
+        // Mostra o popup após 5 segundos
+        setTimeout(() => {
+            popup.classList.add('active');
+        }, 5000);
+    }
+
+    function closePopup() {
+        if (popup) {
+            popup.classList.remove('active');
+            // Salva na sessão que o usuário já viu/fechou o popup
+            sessionStorage.setItem('popupClosed', 'true');
+        }
+    }
+
+    // Event Listeners para fechar
+    if (closeBtn) closeBtn.addEventListener('click', closePopup);
+    if (skipBtn) skipBtn.addEventListener('click', closePopup);
+
+    // Fechar ao clicar fora do container (no overlay escuro)
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+    }
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validação do telefone no Popup
+            const phoneInput = form.querySelector('input[type="tel"]');
+            if (phoneInput) {
+                const phoneDigits = phoneInput.value.replace(/\D/g, '');
+                if (phoneDigits.length < 11) {
+                    alert('Por favor, informe um WhatsApp válido com DDD (11 dígitos).');
+                    return;
+                }
+            }
+            
+            const btn = form.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+
+            // Ativa estado de loading
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            btn.classList.add('btn-loading');
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Obrigado! Entraremos em contato em breve para agendar sua avaliação.');
+                form.reset(); // Limpa o formulário
+                closePopup();
+                
+                // Restaura o botão (para próxima vez)
+                btn.innerHTML = originalContent;
+                btn.classList.remove('btn-loading');
+                btn.disabled = false;
+            }, 1500);
+        });
+    }
+}
 /**
  * Menu Mobile - Toggle
  */
@@ -86,6 +161,21 @@ function initFormSubmission() {
                 return;
             }
             
+            // Validação de telefone (mínimo 11 dígitos)
+            const cleanPhone = data.telefone.replace(/\D/g, '');
+            if (cleanPhone.length < 11) {
+                alert('Por favor, informe o telefone completo com DDD (11 dígitos).');
+                return;
+            }
+            
+            // Captura o botão e ativa o loading
+            const btn = form.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            btn.classList.add('btn-loading');
+            btn.disabled = true;
+
             // Simulação de envio (aqui você pode integrar com backend ou WhatsApp)
             const mensagem = `
 *Nova solicitação de agendamento*
@@ -106,11 +196,17 @@ function initFormSubmission() {
             // Opção 1: Redirecionar para WhatsApp (futuro)
             // window.open(`https://wa.me/${telefoneWhatsApp}?text=${mensagemEncode}`, '_blank');
             
-            // Opção 2: Mostrar mensagem de sucesso
-            alert('Obrigado pela sua mensagem! Em breve entraremos em contato para confirmar seu agendamento.');
-            
-            // Limpar formulário
-            form.reset();
+            // Simula delay de rede (2 segundos)
+            setTimeout(() => {
+                // Opção 2: Mostrar mensagem de sucesso
+                alert('Obrigado pela sua mensagem! Em breve entraremos em contato para confirmar seu agendamento.');
+                
+                // Limpar formulário e restaurar botão
+                form.reset();
+                btn.innerHTML = originalContent;
+                btn.classList.remove('btn-loading');
+                btn.disabled = false;
+            }, 2000);
         });
     }
 }
@@ -185,24 +281,63 @@ function initScrollAnimations() {
  * Mask para telefone
  */
 function initPhoneMask() {
-    const phoneInput = document.getElementById('telefone');
+    // Seleciona todos os inputs de telefone (incluindo o do Popup)
+    const phoneInputs = document.querySelectorAll('input[type="tel"], #telefone');
     
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function(e) {
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', function(e) {
+            // Remove tudo que não for dígito
             let value = e.target.value.replace(/\D/g, '');
             
-            if (value.length > 0) {
-                value = '(' + value;
-            }
-            if (value.length > 3) {
-                value = value.substring(0, 3) + ') ' + value.substring(3);
-            }
+            // Limita a 11 dígitos (DDD + 9 números)
+
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            // Aplica a formatação (XX) XXXXX-XXXX
             if (value.length > 10) {
-                value = value.substring(0, 10) + '-' + value.substring(10, 14);
+                value = value.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+            } else if (value.length > 6) {
+                value = value.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+            } else if (value.length > 2) {
+                value = value.replace(/^(\d\d)(\d{0,5}).*/, "($1) $2");
+            } else if (value.length > 0) {
+                value = value.replace(/^(\d*)/, "($1");
             }
             
+
             e.target.value = value;
         });
-    }
+    });
 }
 
+/**
+ * Custom Alert Modal
+ * Replaces the default browser alert with a styled modal.
+ */
+function customAlert(message, title = 'Alerta') {
+    const modal = document.getElementById('customAlert');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMessage = document.getElementById('modalMessage');
+    const modalBtn = document.getElementById('modalBtn');
+    const modalClose = document.getElementById('modalClose');
+
+    modalTitle.innerText = title;
+    modalMessage.innerText = message;
+    modal.classList.add('active');
+
+    function closeModal() {
+        modal.classList.remove('active');
+    }
+
+    modalBtn.onclick = closeModal;
+    modalClose.onclick = closeModal;
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+}
+
+// Example usage: replace alert() calls with customAlert()
+// customAlert('Sua mensagem aqui!', 'Título Opcional');

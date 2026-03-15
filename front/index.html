@@ -16,200 +16,6 @@
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <style>
-        /* Popup de Contato */
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .popup-overlay.active {
-            display: flex;
-        }
-
-        .popup-container {
-            background: var(--dark-card);
-            border-radius: var(--radius-lg);
-            max-width: 450px;
-            width: 100%;
-            padding: 40px;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            animation: popupSlideIn 0.3s ease;
-            border: 1px solid var(--dark-border);
-            color: var(--text-primary);
-        }
-
-        @keyframes popupSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #777;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .popup-close:hover {
-            color: var(--gold-dark);
-        }
-
-        .popup-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 30px;
-            color: var(--white);
-            box-shadow: var(--shadow-md);
-        }
-
-        .popup-title {
-            font-size: 1.5rem;
-            color: var(--text-black);
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-
-        .popup-subtitle {
-            color: #777;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .popup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .popup-input {
-            padding: 14px 18px;
-            border: 2px solid var(--dark-border);
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            font-family: 'Lato', sans-serif;
-            transition: all 0.3s ease;
-            width: 100%;
-            background: var(--dark-surface);
-            color: var(--text-primary);
-        }
-
-        .popup-input:focus {
-            outline: none;
-            border-color: var(--gold-primary);
-            box-shadow: 0 0 0 4px var(--gold-glow);
-        }
-
-        .popup-btn {
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #D4AF37, #B8860B);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Lato', sans-serif;
-        }
-
-        .popup-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-
-        .popup-divider {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        .popup-divider::before,
-        .popup-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: #E0E0E0;
-        }
-
-        .popup-divider span {
-            padding: 0 15px;
-            color: #777;
-            font-size: 0.9rem;
-        }
-
-        .popup-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 32px;
-            background: #25D366;
-            color: #fff;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .popup-whatsapp:hover {
-            background: #20BD5A;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-
-        .popup-note {
-            font-size: 0.8rem;
-            color: #777;
-            margin-top: 15px;
-        }
-
-        .popup-skip {
-            display: block;
-            margin-top: 15px;
-            color: #777;
-            font-size: 0.85rem;
-            text-decoration: underline;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .popup-skip:hover {
-            color: #B8860B;
-        }
-    </style>
 </head>
 <body>
 
@@ -229,6 +35,7 @@
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="sobre.html" class="nav-link">Sobre</a>
                 <a href="servicos.html" class="nav-link">Serviços</a>
+                <a href="agendamento.html" class="nav-link">Agendamento</a>
             </nav>
             
             <div class="menu-toggle" id="menuToggle">
@@ -493,6 +300,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sobre.html">Sobre Nós</a></li>
                         <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="agendamento.html">Agendamento</a></li>
                     </ul>
                 </div>
                 
@@ -524,7 +332,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Dra. Lolla - Clínica de Estética. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Dra. Lolla - Clínica de Estética. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -534,10 +342,43 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Popup Promocional -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div class="popup-icon">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h3 class="popup-title">Ganhe uma Avaliação!</h3>
+            <p class="popup-subtitle">
+                Cadastre-se agora e ganhe uma avaliação gratuita para Harmonização Glútea com a Dra. Lolla.
+            </p>
+            
+            <form class="popup-form" id="popupForm">
+                <input type="text" class="popup-input" placeholder="Seu Nome" required>
+                <input type="tel" class="popup-input" placeholder="Seu WhatsApp" required>
+                <button type="submit" class="popup-btn">Quero Ganhar</button>
+            </form>
+            
+            <div class="popup-divider">
+                <span>OU</span>
+            </div>
+            
+            <a href="https://wa.me/558187972520" class="popup-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                Falar no WhatsApp
+            </a>
+            
+            <div class="popup-note">
+                *Oferta por tempo limitado.
+            </div>
+            <span class="popup-skip" id="popupSkip">Não tenho interesse agora</span>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="script.js"></script>
     
 
 </body>
 </html>
-

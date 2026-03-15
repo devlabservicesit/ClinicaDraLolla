@@ -1107,6 +1107,18 @@ ul {
     animation-delay: 0.2s;
 }
 
+/* Animação Suave Exclusiva do Popup */
+@keyframes popupSoftFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
 /* Popup Styles (moved from index.html inline) */
 .popup-overlay {
     display: none;
@@ -1120,6 +1132,8 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .popup-overlay.active {
@@ -1135,7 +1149,7 @@ ul {
     text-align: center;
     box-shadow: var(--shadow-lg);
     position: relative;
-    animation: fadeInUp 0.3s ease;
+    animation: popupSoftFade 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     border: 1px solid var(--dark-border);
     color: var(--text-primary);
 }
@@ -1335,7 +1349,7 @@ ul {
         flex-direction: column;
         padding: var(--spacing-lg);
         box-shadow: var(--shadow-md);
-        transition: left 0.3s ease;
+        transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         border-bottom: 1px solid var(--dark-border);
     }
     
@@ -1347,6 +1361,31 @@ ul {
         display: flex;
     }
     
+    /* Animação dos itens do menu mobile */
+    .nav-menu .nav-link {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+
+    .nav-menu.active .nav-link {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav-menu.active .nav-link:nth-child(1) {
+        transition-delay: 0.15s;
+    }
+    .nav-menu.active .nav-link:nth-child(2) {
+        transition-delay: 0.20s;
+    }
+    .nav-menu.active .nav-link:nth-child(3) {
+        transition-delay: 0.25s;
+    }
+    .nav-menu.active .nav-link:nth-child(4) {
+        transition-delay: 0.30s;
+    }
+
     .hero-title {
         font-size: 2.2rem;
     }
@@ -1385,6 +1424,10 @@ ul {
     .about-features {
         grid-template-columns: 1fr;
     }
+
+    .popup-container {
+        padding: 25px;
+    }
 }
 
 /* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
@@ -1413,3 +1456,9 @@ ul {
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Estado de Carregamento do Botão */
+.btn-loading {
+    cursor: wait !important;
+    opacity: 0.8;
+    pointer-events: none;
+}
