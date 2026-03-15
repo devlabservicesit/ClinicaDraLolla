@@ -72,14 +72,16 @@ function initPopup() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Validação do telefone no Popup
-            const phoneInput = form.querySelector('input[type="tel"]');
-            if (phoneInput) {
-                const phoneDigits = phoneInput.value.replace(/\D/g, '');
-                if (phoneDigits.length < 11) {
-                    alert('Por favor, informe um WhatsApp válido com DDD (11 dígitos).');
-                    return;
-                }
+            // Validação: WhatsApp OU Email obrigatório
+            const whatsappInput = form.querySelector('input[type="tel"]');
+            const emailInput = form.querySelector('input[type="email"]');
+            
+            const whatsappValid = whatsappInput && whatsappInput.value.replace(/\D/g, '').length >= 11;
+            const emailValid = emailInput && emailInput.value.includes('@');
+            
+            if (!whatsappValid && !emailValid) {
+                alert('Informe WhatsApp válido (11 dígitos) OU e-mail válido.');
+                return;
             }
             
             const btn = form.querySelector('button[type="submit"]');

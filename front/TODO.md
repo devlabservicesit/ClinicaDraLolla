@@ -1,1 +1,12 @@
-# TODO: Remove Email/WhatsApp Popup\n\nApproved Plan Steps:\n\n## 1. Edit index.html (Remove popup HTML, inline styles, inline script)\n- [ ] Remove <div class=\"popup-overlay\" id=\"contactPopup\">...</div>\n- [ ] Remove <style> /* Popup de Contato */ ... </style>\n- [ ] Remove trailing <script> // Popup de Contato ... </script>\n\n## 2. Edit styles.css (Remove popup styles section)\n- [ ] Remove from `/* Popup Styles (moved from index.html inline) */` to end of `.popup-skip:hover {}`\n\n## 3. Test\n- [ ] Verify no popup on index.html load\n- [ ] Check other pages clean\n\n## 4. Mark complete
+# TODO: Instagram Logo Closer to WhatsApp on All Pages
+
+## Plan Steps:
+- [x] Step 1: Update CSS - Adjust whatsapp-float bottom from 140px to 100px
+- [x] Step 2: Add Instagram float to index.html
+- [x] Step 3: Add Instagram float to sobre.html  
+- [x] Step 4: Add Instagram float to agendamento.html (servicos.html already has it)
+- [x] Step 5: Verify positioning and test
+- [x] Step 6: Complete task
+
+**Task completed: Instagram logo is now closer to WhatsApp (40px gap) and present on all 4 pages.**
+

@@ -7,13 +7,13 @@
 :root {
     /* Dourado Luxo - Paleta Exata */
 --gold-primary: #FAD5A5;
---gold-dark: #E8B923;
+--gold-dark: #e3a425;
     --gold-light: #E8D5A3;
     --gold-pale: #F8F1DC;
     --gold-glow: rgba(218, 165, 32, 0.25);
     
     /* Rose Gold Destaques */
-    --rose-gold: #B76E79;
+    --rose-gold: #e3a425;
     
     /* DARK THEME TOTAL - Premium */
     --dark-bg: #0A0A0A;           /* Fundo principal escuro */
@@ -1431,13 +1431,12 @@ ul {
 }
 
 /* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
-.whatsapp-float {
+.whatsapp-float, .instagram-float {
     position: fixed;
     width: 60px;
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: #25D366;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
@@ -1450,8 +1449,22 @@ ul {
     transition: all 0.3s ease;
 }
 
+.whatsapp-float {
+    background-color: #25D366;
+    bottom: 100px;
+}
+
 .whatsapp-float:hover {
     background-color: #20BD5A;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.instagram-float {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.instagram-float:hover {
     transform: scale(1.1);
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
 }
