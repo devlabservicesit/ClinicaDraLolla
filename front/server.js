@@ -48,15 +48,6 @@ const server = http.createServer((req, res) => {
         if (err) {
             if (err.code === 'ENOENT') {
                 console.log(`[404] Arquivo não encontrado: ${filePath}`);
-                
-                // --- DIAGNÓSTICO DE ERRO ---
-                const dir = path.dirname(filePath);
-                fs.readdir(dir, (readErr, files) => {
-                    if (readErr) console.log(`   ❌ A pasta '${dir}' não existe.`);
-                    else console.log(`   📂 Arquivos nesta pasta: [${files.join(', ')}]`);
-                });
-                // ---------------------------
-                
                 res.writeHead(404, { 'Content-Type': 'text/html' });
                 res.end('<h1>404 - Arquivo não encontrado</h1>', 'utf-8');
             } else {
@@ -72,5 +63,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
-    console.log(`Diretório base: ${__dirname}`);
 });
