@@ -6,7 +6,7 @@
 /* ===== VARIÁVEIS DE CORES ===== */
 :root {
     /* Dourado Luxo - Paleta Exata */
---gold-primary: #FAD5A5;
+--gold-primary: #e3a425;
 --gold-dark: #e3a425;
     --gold-light: #E8D5A3;
     --gold-pale: #F8F1DC;
@@ -23,7 +23,7 @@
     --dark-border: #333333;
     
     /* Texto e Neutros */
-    --white: #FFFFFF;
+    --white: #ffffff;
     --text-primary: #FFFFFF;      /* Texto principal */
     --text-secondary: #D6D6D6;    /* Texto secundário */
     --text-muted: #B0B0B0;        /* Texto desativado */
@@ -871,6 +871,10 @@ ul {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.about-full-badge {
+    color: #000000 !important;
 }
 
 .about-full-content h3 {

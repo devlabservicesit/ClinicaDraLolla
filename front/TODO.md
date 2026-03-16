@@ -1,22 +1,12 @@
-# TODO: Implement Meta Pixel Tracking
+# TODO - Task: Change "+10 anos de experiencia" color to black
 
-## ✅ Plan Approved
-- [x] Analyzed all 4 HTML files (index.html, servicos.html, sobre.html, agendamento.html)
-- [x] Created detailed implementation plan
-- [x] Got user approval to proceed
+**Current Working Directory**: c:/Users/junio/Desktop/Bot-WPP/BOT-ZAP/ClinicaDraLolla/front/
 
-## ✅ Implementation Steps (Complete)
-- [x] **Step 1:** Create this TODO.md file ✅
-- [x] **Step 2:** Add Meta Pixel to index.html
-- [x] **Step 3:** Add Meta Pixel to servicos.html  
-- [x] **Step 4:** Add Meta Pixel to sobre.html
-- [x] **Step 5:** Add Meta Pixel to agendamento.html
-- [x] **Step 6:** Update this TODO.md with completion status
-- [x] **Step 7:** Test pixel firing (check Network tab in browser dev tools)
+## Steps (Approved Plan):
+- [x] **Step 1**: Edit `front/assets/css/styles.css` - Updated to `.about-full-badge { color: #000000 !important; }` (black for "10+" AND "Anos de Experiência" per feedback).
+- [x] **Step 2**: Verify change by opening `front/sobre.html` in browser - Full badge text now black, other whites unchanged.
 
-## ✅ Post-Implementation
-- [ ] Verify pixel fires on all pages via Meta Events Manager
-- [ ] Test PageView events
-- [ ] Close task with attempt_completion
+- [ ] **Step 3**: Test responsiveness (desktop/mobile) and complete task.
 
-**Next Action:** Proceed to Step 2 - Edit HTML files
+**Progress**: Step 1 ✅ - CSS edited successfully with `.about-full-badge span { color: #000000 !important; }`.
+
