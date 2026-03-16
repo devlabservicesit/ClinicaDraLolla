@@ -72,15 +72,21 @@ function initPopup() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Validação: WhatsApp OU Email obrigatório
-            const whatsappInput = form.querySelector('input[type="tel"]');
-            const emailInput = form.querySelector('input[type="email"]');
+            // Validação: Número ou Email (único input)
+            const contactInput = form.querySelector('.popup-input');
             
-            const whatsappValid = whatsappInput && whatsappInput.value.replace(/\D/g, '').length >= 11;
-            const emailValid = emailInput && emailInput.value.includes('@');
+            if (!contactInput || !contactInput.value.trim()) {
+                alert('Informe número ou email.');
+                return;
+            }
             
-            if (!whatsappValid && !emailValid) {
-                alert('Informe WhatsApp válido (11 dígitos) OU e-mail válido.');
+            const value = contactInput.value.trim();
+            const phoneDigits = value.replace(/\D/g, '');
+            const isValidPhone = phoneDigits.length >= 11;
+            const isValidEmail = value.includes('@') && value.includes('.');
+            
+            if (!isValidPhone && !isValidEmail) {
+                alert('Número (11 dígitos) ou email válido.');
                 return;
             }
             
@@ -93,7 +99,8 @@ function initPopup() {
             btn.disabled = true;
             
             setTimeout(() => {
-                alert('Obrigado! Entraremos em contato em breve para agendar sua avaliação.');
+            alert('Obrigado! Entraremos em contato em breve.');
+
                 form.reset(); // Limpa o formulário
                 closePopup();
                 
