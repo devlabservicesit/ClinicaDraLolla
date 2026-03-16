@@ -324,8 +324,7 @@ ul {
 /* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(183, 110, 121, 0.1)),
-                url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920') center/cover;
+background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(183, 110, 121, 0.1)), url('assets/images/background-home.png') center/cover;
     display: flex;
     align-items: center;
     position: relative;
@@ -339,7 +338,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    background: rgba(0,0,0,0.1);
 }
 
 .hero-content {

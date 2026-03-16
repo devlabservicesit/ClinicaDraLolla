@@ -1,6 +1,10 @@
-# Task: Trocar foto principal por foto-perfeita na página sobre
+# TODO - Change Home Background Image
 
-## TODO List
-- [x] Create TODO.md with steps (done)
-- [x] Step 1: Edit front/sobre.html to replace main photo src from foto-principal.jpeg to foto-perfeita.jpeg
-- [x] Step 2: Verify change and complete task
+**Status:** ✅ Completed
+
+## Completed Steps:
+- [x] Create TODO.md with plan steps
+- [x] Edit `front/assets/css/styles.css` to update .hero background to `assets/images/background-home.png`
+- [x] Verify change and test
+
+**Next:** Open `front/index.html` to see the new background.
