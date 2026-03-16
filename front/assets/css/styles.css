@@ -324,22 +324,14 @@ ul {
 /* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
-background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(183, 110, 121, 0.1)), url('assets/images/background-home.png') center/cover;
+background: url('assets/images/background-home.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 80px;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.1);
-}
+/* .hero::before removido para mostrar foto pura */
 
 .hero-content {
     position: relative;
