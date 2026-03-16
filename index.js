@@ -85,6 +85,8 @@ app.post("/webhook", async (req, res) => {
   }
 });
 
-app.listen(8080, () => {
-  console.log("Bot rodando na porta 8080");
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Bot rodando na porta ${PORT}`);
 });
