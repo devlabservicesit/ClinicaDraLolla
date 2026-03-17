@@ -324,7 +324,7 @@ ul {
 /* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
-    background: url('../images/background-home3.jpeg') center center / cover no-repeat;
+background: url('assets/images/background-home.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -349,7 +349,7 @@ ul {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+    margin-bottom: var(--spacing-md);
     border: 1px solid var(--gold-primary);
     box-shadow: var(--shadow-sm);
 }
@@ -365,22 +365,11 @@ ul {
     display: block;
 }
 
-.hero-text-panel {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
-    box-shadow: var(--shadow-md);
-    max-width: 800px;
-}
-
-.hero-text-panel .hero-description {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #000000;
-    margin: 0;
-    line-height: 1.6;
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
 }
 
 .hero-buttons {
@@ -391,12 +380,10 @@ ul {
 
 .hero-features {
     display: flex;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-    padding-top: var(--spacing-md);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
     border-top: 1px solid var(--gray-medium);
-    align-items: center;
-    justify-content: center;
 }
 
 .hero-feature {
@@ -417,6 +404,7 @@ ul {
     justify-content: center;
     color: var(--gold-dark);
 }
+
 /* ===== SERVICES SECTION ===== */
 .services {
     padding: var(--spacing-xl) 0;
