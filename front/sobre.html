@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="assets/images/foto-principal.jpeg" rel="icon">
+
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -29,11 +31,12 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1125340862796487');
 fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1125340862796487&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1125340862796487&ev=PageView&noscript=1"
+        />
+    </noscript>
     <!-- End Meta Pixel Code -->
-
 </head>
 <body>
     <!-- Header -->
@@ -48,11 +51,16 @@ fbq('track', 'PageView');
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="sobre.html" class="nav-link active">Sobre</a>
-                <a href="servicos.html" class="nav-link">Serviços</a>
-                <a href="agendamento.html" class="nav-link">Agendamento</a>
+                <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+                <a href="sobre.html" class="nav-link active" data-i18n="navAbout">Sobre</a>
+                <a href="servicos.html" class="nav-link" data-i18n="navServices">Serviços</a>
             </nav>
+
+            <div class="language-switcher">
+                <button type="button" class="lang-btn" data-lang="pt">PT</button>
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+            </div>
+
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
@@ -64,8 +72,8 @@ fbq('track', 'PageView');
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-header-title">Sobre Nós</h1>
-            <p class="page-header-subtitle">
+            <h1 class="page-header-title" data-i18n="aboutPageTitle">Sobre Nós</h1>
+            <p class="page-header-subtitle" data-i18n="aboutPageSubtitle">
                 Descubra a história por trás da Dra. Lolla e nosso compromisso com a beleza e bem-estar
             </p>
         </div>
@@ -75,32 +83,32 @@ fbq('track', 'PageView');
     <section class="about-full">
         <div class="container">
             <div class="about-full-grid">
-                <div class="about-full-image"> <img src="assets/images/foto-perfeita2.png">
+                <div class="about-full-image">
+                    <img src="assets/images/foto-perfeita2.png" alt="Dra. Lolla">
                     <div class="about-full-badge">
                         <span>10+</span>
-                        <small>Anos de Experiência</small>
+                        <small data-i18n="aboutBadgeExperience">Anos de Experiência</small>
                     </div>
                 </div>
                 
                 <div class="about-full-content">
-                    <h3>Nossa História</h3>
-                    <h2>Dra. Lolla: Paixão por Beleza</h2>
-                    <p>
+                    <h3 data-i18n="aboutStoryTitle">Nossa História</h3>
+                    <h2 data-i18n="aboutStorySubtitle">Dra. Lolla: Paixão por Beleza</h2>
+                    <p data-i18n="aboutStoryText1">
                         A clínica Dra. Lolla nasceu do sonho de proporcionar às mulheres 
                         uma forma segura e eficaz de realçar sua beleza natural. Fundada 
                         pela Dra. Lolla, profissional altamente qualificada e apaixonada 
                         pela estética, a clínica se tornou referência em harmonização glútea 
                         e outros procedimentos estéticos na região.
                     </p>
-                    <p>
+                    <p data-i18n="aboutStoryText2">
                         Com formação em medicina estética e constante atualização em técnicas modernas, a Dra. Lolla traz para suas pacientes o que há de melhor no mundo da estética. Cada tratamento é realizado com precisão, cuidado e atenção aos detalhes, sempre priorizando a segurança e a satisfação das clientes.
                     </p>
-                    <p>
+                    <p data-i18n="aboutStoryText3">
                         Na nossa clínica, você encontrará um ambiente acolhedor, privativo e extremamente limpo. Acreditamos que cada cliente é única e merece um atendimento personalizado, onde suas necessidades e desejos são ouvidos e atendidos com excelência.
                     </p>
-                    <p>
-A Dra. Lolla possui formação como biomédica e enfermeira, além de especializações em harmonização facial, corporal e íntima, ozonioterapia e diversos cursos internacionais na área da estética avançada, trazendo técnicas modernas e seguras para oferecer resultados naturais e de alta qualidade às suas pacientes.
-
+                    <p data-i18n="aboutStoryText4">
+                        A Dra. Lolla possui formação como biomédica e enfermeira, além de especializações em harmonização facial, corporal e íntima, ozonioterapia e diversos cursos internacionais na área da estética avançada, trazendo técnicas modernas e seguras para oferecer resultados naturais e de alta qualidade às suas pacientes.
                     </p>
                 </div>
             </div>
@@ -110,8 +118,8 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
     <!-- Valores Section -->
     <section class="services" style="background: var(--dark-bg);">
         <div class="container">
-            <h2 class="section-title">Nossos Valores</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="aboutValuesTitle">Nossos Valores</h2>
+            <p class="section-subtitle" data-i18n="aboutValuesSubtitle">
                 Os princípios que guiam todo o nosso trabalho
             </p>
             
@@ -120,8 +128,8 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                     <div class="service-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3 class="service-title">Cuidado Humanizado</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="aboutValue1Title">Cuidado Humanizado</h3>
+                    <p class="service-description" data-i18n="aboutValue1Desc">
                         Cada cliente é tratada de forma única e especial. 
                         Nosso atendimento é caloroso, respeitoso e personalizado.
                     </p>
@@ -131,8 +139,8 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="service-title">Segurança em Primeiro Lugar</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="aboutValue2Title">Segurança em Primeiro Lugar</h3>
+                    <p class="service-description" data-i18n="aboutValue2Desc">
                         Utilizamos apenas produtos certificados e técnicas 
                         comprovadas, garantindo resultados seguros e eficazes.
                     </p>
@@ -142,8 +150,8 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                     <div class="service-icon">
                         <i class="fas fa-medal"></i>
                     </div>
-                    <h3 class="service-title">Excelência Profissional</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="aboutValue3Title">Excelência Profissional</h3>
+                    <p class="service-description" data-i18n="aboutValue3Desc">
                         Equipe constantemente atualizada e treinada nas 
                         mais modernas técnicas do mercado estético.
                     </p>
@@ -153,8 +161,8 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                     <div class="service-icon">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h3 class="service-title">Compromisso com Resultados</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="aboutValue4Title">Compromisso com Resultados</h3>
+                    <p class="service-description" data-i18n="aboutValue4Desc">
                         Satisfação da cliente é nossa maior recompensa. 
                         Trabalhamos para superar expectativas a cada visita.
                     </p>
@@ -168,9 +176,9 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <span class="about-subtitle">Qualificação</span>
-                    <h2 class="about-title">Formação e Certificações</h2>
-                    <p class="about-text">
+                    <span class="about-subtitle" data-i18n="aboutQualificationSubtitle">Qualificação</span>
+                    <h2 class="about-title" data-i18n="aboutQualificationTitle">Formação e Certificações</h2>
+                    <p class="about-text" data-i18n="aboutQualificationText1">
                         A Dra. Lolla possui formação sólida em medicina estética, com 
                         especializações nas mais renomadas instituições do país. Sua 
                         trajetória inclui:
@@ -179,23 +187,23 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                     <div class="about-features">
                         <div class="about-feature">
                             <i class="fas fa-graduation-cap about-feature-icon"></i>
-                            <span>Formação em Medicina</span>
+                            <span data-i18n="aboutQualificationItem1">Formação em Medicina</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-certificate about-feature-icon"></i>
-                            <span>Especialização em Estética</span>
+                            <span data-i18n="aboutQualificationItem2">Especialização em Estética</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-award about-feature-icon"></i>
-                            <span>Certificações Internacionais</span>
+                            <span data-i18n="aboutQualificationItem3">Certificações Internacionais</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-user-md about-feature-icon"></i>
-                            <span>Membro de Sociedades Especializadas</span>
+                            <span data-i18n="aboutQualificationItem4">Membro de Sociedades Especializadas</span>
                         </div>
                     </div>
                     
-                    <p class="about-text" style="margin-top: var(--spacing-md);">
+                    <p class="about-text" style="margin-top: var(--spacing-md);" data-i18n="aboutQualificationText2">
                         Participa frequentemente de congressos e eventos internacionais 
                         para manter-se atualizada nas mais recentes técnicas e tendências 
                         do mercado estético.
@@ -204,7 +212,7 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                 
                 <div class="about-image">
                     <div class="about-image-main">
-                    <img src="assets/images/jaleco-branco.jpeg" alt="Dra. Lolla - Formação">
+                        <img src="assets/images/jaleco-branco.jpeg" alt="Dra. Lolla - Formação">
                     </div>
                     <div class="about-image-accent">L</div>
                 </div>
@@ -221,9 +229,9 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                         <div class="footer-logo-icon">L</div>
                         <div class="footer-logo-text">Dra. Lolla</div>
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footerDescription">
                         Clínica de estética especializada em harmonização glútea e 
-                        procedimentos estéticos de alta qualidade. Seu beleza 
+                        procedimentos estéticos de alta qualidade. Sua beleza 
                         e bem-estar é nossa prioridade.
                     </p>
                     <div class="footer-social">
@@ -234,30 +242,30 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
                 </div>
                 
                 <div class="footer-links">
-                    <h4 class="footer-title">Links Rápidos</h4>
+                    <h4 class="footer-title" data-i18n="footerQuickLinks">Links Rápidos</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre Nós</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="agendamento.html">Agendamento</a></li>
+                        <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                        <li><a href="sobre.html" data-i18n="footerAboutUs">Sobre Nós</a></li>
+                        <li><a href="servicos.html" data-i18n="navServices">Serviços</a></li>
+                        <li><a href="agendamento.html" data-i18n="navSchedule">Agendamento</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4 class="footer-title">Serviços</h4>
+                    <h4 class="footer-title" data-i18n="footerServices">Serviços</h4>
                     <ul>
-                        <li><a href="servicos.html">Harmonização Glútea</a></li>
-                        <li><a href="servicos.html">Preenchimento</a></li>
-                        <li><a href="servicos.html">Botox</a></li>
-                        <li><a href="servicos.html">Tratamentos Corporais</a></li>
+                        <li><a href="servicos.html" data-i18n="aboutFooterService1">Harmonização Glútea</a></li>
+                        <li><a href="servicos.html" data-i18n="aboutFooterService2">Preenchimento</a></li>
+                        <li><a href="servicos.html" data-i18n="aboutFooterService3">Botox</a></li>
+                        <li><a href="servicos.html" data-i18n="service2Title">Tratamentos Corporais</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
-                    <h4 class="footer-title">Contato</h4>
+                    <h4 class="footer-title" data-i18n="footerContact">Contato</h4>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Rua Barão de Souza Leão, 195<br>Recife - Pernambuco</span>
+                        <span data-i18n-html="footerAddress">Rua Barão de Souza Leão, 195<br>Recife - Pernambuco</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone-alt"></i>
@@ -271,7 +279,7 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Dra. Lolla - Clínica de Estética. Todos os direitos reservados.</p>
+                <p data-i18n="footerCopyright">&copy; 2026 Dra. Lolla - Clínica de Estética. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -293,12 +301,12 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
             <div class="popup-icon">
                 <i class="fas fa-phone"></i>
             </div>
-            <h3 class="popup-title">Entre em Contato</h3>
-            <p class="popup-subtitle">Deixe seu número ou email para falarmos agora</p>
+            <h3 class="popup-title" data-i18n="popupTitle">Entre em Contato</h3>
+            <p class="popup-subtitle" data-i18n="popupSubtitle">Deixe seu número ou email para falarmos agora</p>
             
             <form class="popup-form" id="popupForm">
-                <input type="text" class="popup-input" placeholder="Número ou Email" required>
-                <button type="submit" class="popup-btn">Enviar</button>
+                <input type="text" class="popup-input" data-i18n-placeholder="popupPlaceholder" placeholder="Número ou Email" required>
+                <button type="submit" class="popup-btn" data-i18n="popupButton">Enviar</button>
             </form>
             
             <div class="popup-divider">
@@ -307,10 +315,10 @@ A Dra. Lolla possui formação como biomédica e enfermeira, além de especializ
             
             <a href="https://wa.me/558187972520" class="popup-whatsapp">
                 <i class="fab fa-whatsapp"></i>
-                Falar no WhatsApp
+                <span data-i18n="popupWhatsapp">Falar no WhatsApp</span>
             </a>
             
-            <span class="popup-skip" id="popupSkip">Fechar</span>
+            <span class="popup-skip" id="popupSkip" data-i18n="popupCloseText">Fechar</span>
         </div>
     </div>
 

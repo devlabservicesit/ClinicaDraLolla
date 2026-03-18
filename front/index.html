@@ -32,14 +32,14 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1125340862796487');
 fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1125340862796487&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1125340862796487&ev=PageView&noscript=1"
+        />
+    </noscript>
     <!-- End Meta Pixel Code -->
-
 </head>
 <body>
-
 
     <!-- Header -->
     <header class="header" id="header">
@@ -53,11 +53,15 @@ fbq('track', 'PageView');
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="sobre.html" class="nav-link">Sobre</a>
-                <a href="servicos.html" class="nav-link">Serviços</a>
-                <a href="agendamento.html" class="nav-link">Agendamento</a>
+                <a href="index.html" class="nav-link active" data-i18n="navHome">Home</a>
+                <a href="sobre.html" class="nav-link" data-i18n="navAbout">Sobre</a>
+                <a href="servicos.html" class="nav-link" data-i18n="navServices">Serviços</a>
             </nav>
+
+            <div class="language-switcher">
+                <button type="button" class="lang-btn" data-lang="pt">PT</button>
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+            </div>
             
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -68,25 +72,25 @@ fbq('track', 'PageView');
     </header>
 
     <!-- Hero Section -->
-<section class="hero" style="background-image: url('assets/images/background-home.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="container">
-        <div class="hero-content">
-            <span class="hero-badge">Especialistas em Harmonização Glútea</span>
-            <h1 class="hero-title">
-                Realce sua Beleza
-                <span>com Elegância</span>
-            </h1>
-            <p class="hero-description">
-                Transforme sua silhouette com tratamentos exclusivos de harmonização glútea. 
-                Na Dra. Lolla, combinamos tecnologia de ponta com cuidado personalizado para 
-                proporcionar resultados naturais e deslumbrantes.
-            </p>
-            <div class="hero-buttons">
-                <a href="servicos.html" class="btn btn-secondary">
-                    <i class="fas fa-spa"></i>
-                    Ver Serviços
-                </a>
-            </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge" data-i18n="heroBadge">Especialistas em Harmonização Glútea</span>
+                <h1 class="hero-title">
+                    <span data-i18n="heroTitle">Realce sua Beleza</span>
+                    <span data-i18n="heroTitleSpan">com Elegância</span>
+                </h1>
+                <p class="hero-description" data-i18n="heroDescription">
+                    Transforme sua silhouette com tratamentos exclusivos de harmonização glútea. 
+                    Na Dra. Lolla, combinamos tecnologia de ponta com cuidado personalizado para 
+                    proporcionar resultados naturais e deslumbrantes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="servicos.html" class="btn btn-secondary">
+                        <i class="fas fa-spa"></i>
+                        <span data-i18n="heroButton">Ver Serviços</span>
+                    </a>
+                </div>
                 
                 <div class="hero-features">
                     <div class="hero-feature">
@@ -132,7 +136,7 @@ fbq('track', 'PageView');
                         projeção e definição corporal e facial.
                     </p>
                     <a href="servicos.html" class="service-link">
-                      Saiba mais <i class="fas fa-arrow-right"></i>
+                        Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
@@ -147,7 +151,7 @@ fbq('track', 'PageView');
                         medidas e melhorar a aparência da pele.
                     </p>
                     <a href="servicos.html" class="service-link">
-                      Saiba mais <i class="fas fa-arrow-right"></i>
+                        Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
@@ -162,7 +166,7 @@ fbq('track', 'PageView');
                         proporcionar os melhores resultados.
                     </p>
                     <a href="servicos.html" class="service-link">
-                      Saiba mais <i class="fas fa-arrow-right"></i>
+                        Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
@@ -177,7 +181,7 @@ fbq('track', 'PageView');
                         para as necessidades únicas de cada cliente.
                     </p>
                     <a href="servicos.html" class="service-link">
-                      Saiba mais <i class="fas fa-arrow-right"></i>
+                        Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -232,7 +236,7 @@ fbq('track', 'PageView');
                     
                     <a href="sobre.html" class="btn btn-primary">
                         <i class="fas fa-user-md"></i>
-                       Conheça a Dra. Lolla
+                        Conheça a Dra. Lolla
                     </a>
                 </div>
             </div>
@@ -306,7 +310,7 @@ fbq('track', 'PageView');
                     </div>
                     <p class="footer-description">
                         Clínica de estética especializada em harmonização glútea e 
-                        procedimentos estéticos de alta qualidade. Seu beleza 
+                        procedimentos estéticos de alta qualidade. Sua beleza 
                         e bem-estar é nossa prioridade.
                     </p>
                     <div class="footer-social">
@@ -374,12 +378,12 @@ fbq('track', 'PageView');
             <div class="popup-icon">
                 <i class="fas fa-phone"></i>
             </div>
-            <h3 class="popup-title">Entre em Contato</h3>
-            <p class="popup-subtitle">Deixe seu número ou email para falarmos agora</p>
+            <h3 class="popup-title" data-i18n="popupTitle">Entre em Contato</h3>
+            <p class="popup-subtitle" data-i18n="popupSubtitle">Deixe seu número ou email para falarmos agora</p>
             
             <form class="popup-form" id="popupForm">
-                <input type="text" class="popup-input" placeholder="Número ou Email" required>
-                <button type="submit" class="popup-btn">Enviar</button>
+                <input type="text" class="popup-input" data-i18n-placeholder="popupPlaceholder" placeholder="Número ou Email" required>
+                <button type="submit" class="popup-btn" data-i18n="popupButton">Enviar</button>
             </form>
             
             <div class="popup-divider">
@@ -388,16 +392,15 @@ fbq('track', 'PageView');
             
             <a href="https://wa.me/558187972520" class="popup-whatsapp">
                 <i class="fab fa-whatsapp"></i>
-                Falar no WhatsApp
+                <span data-i18n="popupWhatsapp">Falar no WhatsApp</span>
             </a>
             
-            <span class="popup-skip" id="popupSkip">Fechar</span>
+            <span class="popup-skip" id="popupSkip" data-i18n="popupCloseText">Fechar</span>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="assets/js/script.js"></script>
-    
 
 </body>
 </html>
