@@ -20,6 +20,9 @@ const translations = {
         heroFeature1: "Profissionais Qualificados",
         heroFeature2: "Atendimento Personalizado",
         heroFeature3: "Resultados Comprovados",
+        feature1: "Profissionais Qualificados",
+        feature2: "Atendimento Personalizado",
+        feature3: "Resultados Comprovados",
 
         servicesTitle: "Nossos Serviços",
         servicesSubtitle: "Tratamentos exclusivos desenvolvidos para realçar sua beleza natural",
@@ -138,6 +141,9 @@ const translations = {
         navAbout: "About",
         navServices: "Services",
         navSchedule: "Booking",
+        feature1: "Qualified Professionals",
+        feature2: "Personalized Service",
+        feature3: "Proven Results",
 
         heroBadge: "Glute Harmonization Specialist",
         heroTitle: "Enhance Your Beauty",
