@@ -458,11 +458,13 @@ background: linear-gradient(to right, var(--dark-bg), #151515 40%, #0f0f0f);
 
 .hero-features {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--gray-medium);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hero-feature {
@@ -499,7 +501,8 @@ background: linear-gradient(to right, var(--dark-bg), #151515 40%, #0f0f0f);
     }
 
     .hero-features {
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
     }
 }
 
