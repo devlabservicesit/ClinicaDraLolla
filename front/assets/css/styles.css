@@ -7,7 +7,7 @@
 :root {
     /* Dourado Luxo - Paleta Exata */
 --gold-primary: #e3a425;
---gold-dark: #e3a425;
+--gold-dark: #A67C00;
     --gold-light: #E8D5A3;
     --gold-pale: #F8F1DC;
     --gold-glow: rgba(218, 165, 32, 0.25);
@@ -151,7 +151,7 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, var(--dark-bg), #151515 50%, #d4a017);
+background: linear-gradient(to right, var(--dark-bg), #151515 50%, #0f0f0f);
     box-shadow: var(--shadow-sm), 0 0 20px rgba(227, 164, 37, 0.4);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -159,7 +159,7 @@ ul {
 
 .header.scrolled {
     box-shadow: var(--shadow-lg), 0 0 30px rgba(227, 164, 37, 0.6);
-    background: linear-gradient(to right, var(--dark-bg), #151515 40%, #d4a017);
+background: linear-gradient(to right, var(--dark-bg), #151515 40%, #0f0f0f);
 }
 
 .header-inner {
@@ -195,7 +195,7 @@ ul {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--gold-dark);
+    color: var(--gold-primary);
 }
 
 .logo-text span {
@@ -359,40 +359,76 @@ ul {
 /* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
-background: url('assets/images/background-home.png') center/cover no-repeat;
+    background: url('../images/foto-definitivas.png') center/cover no-repeat;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     padding-top: 80px;
+    padding-bottom: 0;
+    overflow: hidden;
 }
-
-/* .hero::before removido para mostrar foto pura */
 
 .hero-content {
     position: relative;
     z-index: 1;
     max-width: 700px;
+    width: 100%;
+    padding-bottom: 0;
+    transform: none;
 }
 
 .hero-badge {
-    display: inline-block;
-    background: var(--dark-card);
-    color: var(--gold-primary);
-    padding: 8px 20px;
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    background: linear-gradient(135deg, rgba(248,241,220,0.95), rgba(232,213,163,0.9));
+    color: var(--gold-dark);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: clamp(0.72rem, 1.2vw, 0.9rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: var(--spacing-md);
-    border: 1px solid var(--gold-primary);
-    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gold-pale);
+    box-shadow: var(--shadow-gold);
+    backdrop-filter: blur(20px);
+    position: relative;
+    top: 12px;
+    overflow: hidden;
+    max-width: 100%;
+    width: fit-content;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+}
+.hero-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.hero-badge:hover::before {
+    left: 100%;
+}
+
+.hero-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), 0 0 30px var(--gold-glow);
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
     color: var(--white);
+    line-height: 1.1;
 }
 
 .hero-title span {
@@ -401,10 +437,17 @@ background: url('assets/images/background-home.png') center/cover no-repeat;
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    color: var(--text-light);
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
+    background: linear-gradient(135deg, rgba(248,241,220,0.95), rgba(232,213,163,0.9));
+    color: var(--gold-dark);
     margin-bottom: var(--spacing-lg);
     line-height: 1.8;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gold-pale);
+    box-shadow: var(--shadow-gold);
+    backdrop-filter: blur(20px);
+    max-width: 540px;
 }
 
 .hero-buttons {
@@ -419,6 +462,7 @@ background: url('assets/images/background-home.png') center/cover no-repeat;
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--gray-medium);
+    flex-wrap: wrap;
 }
 
 .hero-feature {
@@ -440,6 +484,47 @@ background: url('assets/images/background-home.png') center/cover no-repeat;
     color: var(--gold-dark);
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-bottom: 10vh;
+    }
+
+    .hero-badge {
+        padding: 8px 14px;
+    }
+
+    .hero-features {
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding-bottom: 8vh;
+    }
+
+    .hero-badge {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+}
 /* ===== SERVICES SECTION ===== */
 .services {
     padding: var(--spacing-xl) 0;
