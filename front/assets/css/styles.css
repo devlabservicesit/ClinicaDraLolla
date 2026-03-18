@@ -151,14 +151,15 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--dark-card);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(to right, var(--dark-bg), #151515 50%, #d4a017);
+    box-shadow: var(--shadow-sm), 0 0 20px rgba(227, 164, 37, 0.4);
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
 .header.scrolled {
-    box-shadow: var(--shadow-md), 0 0 20px var(--gold-glow);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(227, 164, 37, 0.6);
+    background: linear-gradient(to right, var(--dark-bg), #151515 40%, #d4a017);
 }
 
 .header-inner {
