@@ -71,10 +71,10 @@ const translations = {
 
         servicesPageCard4Title: "Protocolos Exclusivos da Clínica",
         servicesPageCard4Desc: "Tratamentos personalizados desenvolvidos especificamente para as necessidades únicas de cada cliente.",
-        servicesPageCard4Item1: "Protocolo Bronze Natural",
-        servicesPageCard4Item2: "Protocolo Beleza360",
-        servicesPageCard4Item3: "Protocolo Rejuvenescimento",
-        servicesPageCard4Item4: "Protocolo Modelagem Express",
+"Microagulhamento Robótica"
+"Protocolo harmonização íntima"
+"Lipo sem corte"
+"Harmonização Labial"
 
         aboutPageTitle: "Sobre Nós",
         aboutPageSubtitle: "Descubra a história por trás da Dra. Lolla e nosso compromisso com a beleza e bem-estar",
@@ -201,10 +201,10 @@ const translations = {
 
         servicesPageCard4Title: "Exclusive Clinic Protocols",
         servicesPageCard4Desc: "Personalized treatments developed specifically for each client's unique needs.",
-        servicesPageCard4Item1: "Natural Bronze Protocol",
-        servicesPageCard4Item2: "Beauty360 Protocol",
-        servicesPageCard4Item3: "Rejuvenation Protocol",
-        servicesPageCard4Item4: "Express Body Contouring Protocol",
+"Robotic Microneedling"
+"Intimate Harmonization Protocol"
+"No-Cut Lipo"
+"Lip Harmonization"
 
         aboutPageTitle: "About Us",
         aboutPageSubtitle: "Discover the story behind Dra. Lolla and our commitment to beauty and well-being",
