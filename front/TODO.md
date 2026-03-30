@@ -1,1 +1,1 @@
-# Update Protocolos Exclusivos\n\n- [ ] Step 1: Update servicos.html (image + verify structure)\n- [ ] Step 2: Update script.js translations (PT/EN)\n- [ ] Step 3: Test and complete\n
+# TODO: Set logo-site as site favicon\n\n- [x] Step 1: Edit front/index.html - Replace favicon image\n- [x] Step 2: Edit front/sobre.html - Replace favicon image  \n- [x] Step 3: Edit front/servicos.html - Replace favicon image\n- [x] Step 4: Verify changes and complete task
