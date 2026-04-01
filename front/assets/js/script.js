@@ -138,7 +138,7 @@ const translations = {
     locationSubtitle: "Encontre-nos facilmente e venha conhecer nosso espaço",
     locationAddressTitle: "Endereço",
     locationExtra: "Boa Viagem, a poucos metros da praia",
-    locationHours: "Seg-Sex: 9h às 18h | Sáb: 9h às 15h"
+    locationHours: "Seg-Sex: 9h às 18h | Sáb: 9h às 15h",
 
 
     popupTitle: "Entre em Contato",
@@ -278,8 +278,7 @@ en: {
     locationSubtitle: "Find us easily and come visit our space",
     locationAddressTitle: "Address",
     locationExtra: "Boa Viagem, just steps from the beach",
-    locationHours: "Mon-Fri: 9am-6pm | Sat: 9am-3pm"
-
+    locationHours: "Mon-Fri: 9am-6pm | Sat: 9am-3pm",
 
     popupTitle: "Get in Touch",
     popupSubtitle: "Leave your phone number or email so we can talk now",
@@ -295,7 +294,8 @@ en: {
     alertInvalidPhone: "Please enter the full phone number with area code (11 digits).",
     alertScheduleSuccess: "Thank you for your message! We will contact you soon to confirm your booking.",
     sending: "Sending..."
-}}
+    }
+};
 document.addEventListener('DOMContentLoaded', function() {
     initLanguage();
     initHeader();
