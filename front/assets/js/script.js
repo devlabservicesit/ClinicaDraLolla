@@ -4,13 +4,15 @@
  */
 
 const translations = {
-   pt: {
+  pt: {
     pageTitle: "Dra. Lolla - Clínica de Estética | Harmonização Glútea",
 
     navHome: "Home",
     navAbout: "Sobre",
     navServices: "Serviços",
     navSchedule: "Agendamento",
+
+    logoSubtitle: "Clínica de Estética",
 
     heroBadge: "Especialista em Harmonização Glútea",
     heroTitle: "Realce sua Beleza",
@@ -56,33 +58,39 @@ const translations = {
 
     testimonialsTitle: "O que Nossas Clientes Dizem",
     testimonialsSubtitle: "A satisfação das nossas clientes é a nossa maior recompensa",
+    testimonial1: "\"Eu sempre quis fazer harmonização glútea, mas tinha muito medo. A Dra. Lolla me passou toda segurança desde a primeira consulta. O resultado ficou natural e super bonito!\"",
+    testimonial2: "\"Atendimento impecável! A clínica é linda, super limpa e aconchegante. A Dra. Lolla é muito atenciosa e explica todo o procedimento. Recomendo para todas as minhas amigas.\"",
+    testimonial3: "\"Fiz vários tratamentos na clínica e sempre amei os resultados. Agora estou fazendo o tratamento corporal e já vejo diferença.\"",
+    testimonialRole1: "Harmonização Glútea",
+    testimonialRole2: "Preenchimento Labial",
+    testimonialRole3: "Tratamento Corporal",
 
     servicesPageTitle: "Nossos Serviços",
     servicesPageSubtitle: "Tratamentos especializados para realçar sua beleza natural com segurança e qualidade",
 
-    servicesPageCard1Title: "Harmonização Glútea",
+    servicesPageCard1Title: "Harmonização de Glúteo",
     servicesPageCard1Desc: "Procedimentos especializados para aumentar volume, contorno e projeção dos glúteos com resultados naturais e harmônicos.",
     servicesPageCard1Item1: "Harmonização Glútea",
 
     servicesPageCard2Title: "Tratamentos Corporais",
     servicesPageCard2Desc: "Procedimentos especializados para modelar o corpo, reduzir medidas e melhorar a aparência da pele. Resultados visíveis e duradouros.",
     servicesPageCard2Item1: "Drenagem Linfática",
-    servicesPageCard2Item2: "Tratamento Sculpt",
+    servicesPageCard2Item2: "Detox Corporal",
     servicesPageCard2Item3: "Redução de Celulite",
     servicesPageCard2Item4: "Modelagem Corporal",
 
     servicesPageCard3Title: "Tecnologias Avançadas",
     servicesPageCard3Desc: "Equipamentos de última geração e técnicas inovadoras para proporcionar os melhores resultados com segurança e conforto.",
-    servicesPageCard3Item1: "Laserterapia",
+    servicesPageCard3Item1: "Lipo sem corte",
     servicesPageCard3Item2: "Radiofrequência",
-    servicesPageCard3Item3: "Ultrassom Microfocado",
-    servicesPageCard3Item4: "Tratamentos Não Invasivos",
+    servicesPageCard3Item3: "Ultrassom Microfocado MPT",
+    servicesPageCard3Item4: "Tratamentos não invasivos",
 
     servicesPageCard4Title: "Protocolos Exclusivos da Clínica",
     servicesPageCard4Desc: "Tratamentos personalizados desenvolvidos especificamente para as necessidades únicas de cada cliente.",
     servicesPageCard4Item1: "Microagulhamento Robótico",
     servicesPageCard4Item2: "Protocolo de Harmonização Íntima",
-    servicesPageCard4Item3: "Lipo Sem Corte",
+    servicesPageCard4Item3: "Endolaser Avançado",
     servicesPageCard4Item4: "Harmonização Labial",
 
     aboutPageTitle: "Sobre Nós",
@@ -91,7 +99,6 @@ const translations = {
 
     aboutStoryTitle: "Nossa História",
     aboutStorySubtitle: "Dra. Lolla: Paixão pela Beleza",
-
     aboutStoryText1: "A clínica Dra. Lolla nasceu do sonho de proporcionar às mulheres uma forma segura e eficaz de realçar sua beleza natural. Fundada pela Dra. Lolla, profissional altamente qualificada e apaixonada pela estética, a clínica se tornou referência em harmonização glútea e outros procedimentos estéticos na região.",
     aboutStoryText2: "Com formação em medicina estética e constante atualização em técnicas modernas, a Dra. Lolla traz para suas pacientes o que há de melhor no mundo da estética. Cada tratamento é realizado com precisão, cuidado e atenção aos detalhes, sempre priorizando a segurança e a satisfação das clientes.",
     aboutStoryText3: "Na nossa clínica, você encontrará um ambiente acolhedor, privativo e extremamente limpo. Acreditamos que cada cliente é única e merece um atendimento personalizado, onde suas necessidades e desejos são ouvidos e atendidos com excelência.",
@@ -99,16 +106,12 @@ const translations = {
 
     aboutValuesTitle: "Nossos Valores",
     aboutValuesSubtitle: "Os princípios que guiam todo o nosso trabalho",
-
     aboutValue1Title: "Cuidado Humanizado",
     aboutValue1Desc: "Cada cliente é tratada de forma única e especial. Nosso atendimento é acolhedor, respeitoso e personalizado.",
-
     aboutValue2Title: "Segurança em Primeiro Lugar",
     aboutValue2Desc: "Utilizamos apenas produtos certificados e técnicas comprovadas, garantindo resultados seguros e eficazes.",
-
     aboutValue3Title: "Excelência Profissional",
     aboutValue3Desc: "Equipe constantemente atualizada e treinada nas mais modernas técnicas do mercado estético.",
-
     aboutValue4Title: "Compromisso com Resultados",
     aboutValue4Desc: "A satisfação da cliente é nossa maior recompensa. Trabalhamos para superar expectativas a cada visita.",
 
@@ -132,14 +135,12 @@ const translations = {
     footerAddress: "Rua Barão de Souza Leão, 195<br>Recife - Pernambuco",
     footerDescription: "Clínica de estética especializada em harmonização glútea e procedimentos estéticos de alta qualidade. Sua beleza e bem-estar são nossa prioridade.",
     footerCopyright: "© 2026 Dra. Lolla - Clínica de Estética. Todos os direitos reservados.",
-    
-    // Localização Section
+
     locationTitle: "Nossa Localização",
     locationSubtitle: "Encontre-nos facilmente e venha conhecer nosso espaço",
     locationAddressTitle: "Endereço",
     locationExtra: "Boa Viagem, a poucos metros da praia",
     locationHours: "Seg-Sex: 9h às 18h | Sáb: 9h às 15h",
-
 
     popupTitle: "Entre em Contato",
     popupSubtitle: "Deixe seu número ou email para falarmos agora",
@@ -147,6 +148,7 @@ const translations = {
     popupButton: "Enviar",
     popupWhatsapp: "Falar no WhatsApp",
     popupCloseText: "Fechar",
+    popupOr: "OU",
 
     alertInvalidContact: "Informe um número ou email.",
     alertInvalidFormat: "Informe um número (11 dígitos) ou email válido.",
@@ -155,8 +157,9 @@ const translations = {
     alertInvalidPhone: "Informe o telefone completo com DDD (11 dígitos).",
     alertScheduleSuccess: "Obrigado pela sua mensagem! Em breve entraremos em contato para confirmar seu agendamento.",
     sending: "Enviando..."
-},
-en: {
+  },
+
+  en: {
     pageTitle: "Dra. Lolla - Aesthetic Clinic | Glute Harmonization",
 
     navHome: "Home",
@@ -164,35 +167,44 @@ en: {
     navServices: "Services",
     navSchedule: "Booking",
 
-    feature1: "Qualified Professionals",
-    feature2: "Personalized Service",
-    feature3: "Proven Results",
+    logoSubtitle: "Aesthetic Clinic",
 
     heroBadge: "Glute Harmonization Specialist",
     heroTitle: "Enhance Your Beauty",
     heroTitleSpan: "with Elegance",
     heroDescription: "Transform your silhouette with exclusive glute harmonization treatments. At Dra. Lolla, we combine cutting-edge technology with personalized care to deliver natural and stunning results.",
     heroButton: "View Services",
+
     heroFeature1: "Qualified Professionals",
     heroFeature2: "Personalized Care",
     heroFeature3: "Proven Results",
 
+    feature1: "Qualified Professionals",
+    feature2: "Personalized Care",
+    feature3: "Proven Results",
+
     servicesTitle: "Our Services",
     servicesSubtitle: "Exclusive treatments designed to enhance your natural beauty",
+
     service1Title: "Harmonization",
-    service1Desc: "Revolutionary procedures to provide volume, projection, and body and facial definition.",
+    service1Desc: "Advanced procedures to provide volume, projection, and body and facial definition.",
+
     service2Title: "Body Treatments",
     service2Desc: "Specialized procedures to shape the body, reduce measurements, and improve skin appearance.",
+
     service3Title: "Advanced Technologies",
     service3Desc: "State-of-the-art equipment and innovative techniques to deliver the best results.",
+
     service4Title: "Exclusive Protocols",
     service4Desc: "Personalized treatments developed specifically for each client's unique needs.",
+
     knowMore: "Learn More",
 
     aboutSubtitle: "About Us",
-    aboutTitle: "Beauty and Well-being First",
+    aboutTitle: "Beauty and Well-Being First",
     aboutText1: "At Dra. Lolla Clinic, we believe everyone deserves to feel confident in their own skin. Our highly qualified team combines technical expertise with personalized, human-centered care.",
-    aboutText2: "Specialists in glute harmonization, we offer innovative and safe treatments, always using high-quality products and minimally invasive techniques to ensure natural and satisfying results.",
+    aboutText2: "As specialists in glute harmonization, we offer innovative and safe treatments, using high-quality products and minimally invasive techniques to ensure natural and satisfying results.",
+
     aboutFeature1: "State-of-the-Art Equipment",
     aboutFeature2: "Certified Products",
     aboutFeature3: "Welcoming Environment",
@@ -201,33 +213,39 @@ en: {
 
     testimonialsTitle: "What Our Clients Say",
     testimonialsSubtitle: "Our clients' satisfaction is our greatest reward",
+    testimonial1: "\"I had always wanted glute harmonization, but I was very afraid. Dra. Lolla gave me complete confidence from the very first consultation. The result looked natural and beautiful!\"",
+    testimonial2: "\"Impeccable service! The clinic is beautiful, very clean, and cozy. Dra. Lolla is very attentive and explains the entire procedure. I recommend her to all my friends.\"",
+    testimonial3: "\"I have had several treatments at the clinic and have always loved the results. Now I am doing body treatment and I can already see the difference.\"",
+    testimonialRole1: "Glute Harmonization",
+    testimonialRole2: "Lip Fillers",
+    testimonialRole3: "Body Treatment",
 
     servicesPageTitle: "Our Services",
     servicesPageSubtitle: "Specialized treatments to enhance your natural beauty with safety and quality",
 
     servicesPageCard1Title: "Glute Harmonization",
-    servicesPageCard1Desc: "Specialized procedures to enhance glute volume, contour, and projection with natural-looking and harmonious results.",
+    servicesPageCard1Desc: "Specialized procedures to increase glute volume, contour, and projection with natural and harmonious results.",
     servicesPageCard1Item1: "Glute Harmonization",
 
     servicesPageCard2Title: "Body Treatments",
     servicesPageCard2Desc: "Specialized procedures to shape the body, reduce measurements, and improve skin appearance. Visible and long-lasting results.",
     servicesPageCard2Item1: "Lymphatic Drainage",
-    servicesPageCard2Item2: "Sculpting Treatment",
+    servicesPageCard2Item2: "Body Detox",
     servicesPageCard2Item3: "Cellulite Reduction",
     servicesPageCard2Item4: "Body Contouring",
 
     servicesPageCard3Title: "Advanced Technologies",
     servicesPageCard3Desc: "State-of-the-art equipment and innovative techniques to deliver the best results with safety and comfort.",
-    servicesPageCard3Item1: "Laser Therapy",
+    servicesPageCard3Item1: "Non-surgical Lipo",
     servicesPageCard3Item2: "Radiofrequency",
-    servicesPageCard3Item3: "Microfocused Ultrasound",
+    servicesPageCard3Item3: "Microfocused Ultrasound MPT",
     servicesPageCard3Item4: "Non-invasive Treatments",
 
     servicesPageCard4Title: "Exclusive Clinic Protocols",
     servicesPageCard4Desc: "Personalized treatments developed specifically for each client's unique needs.",
     servicesPageCard4Item1: "Robotic Microneedling",
     servicesPageCard4Item2: "Intimate Harmonization Protocol",
-    servicesPageCard4Item3: "No-Cut Lipo",
+    servicesPageCard4Item3: "Advanced Endolaser",
     servicesPageCard4Item4: "Lip Harmonization",
 
     aboutPageTitle: "About Us",
@@ -238,28 +256,28 @@ en: {
     aboutStorySubtitle: "Dra. Lolla: Passion for Beauty",
     aboutStoryText1: "Dra. Lolla Clinic was born from the dream of providing women with a safe and effective way to enhance their natural beauty. Founded by Dra. Lolla, a highly qualified professional passionate about aesthetics, the clinic has become a reference in glute harmonization and other aesthetic procedures in the region.",
     aboutStoryText2: "With training in aesthetic medicine and constant updates in modern techniques, Dra. Lolla brings her patients the very best from the world of aesthetics. Each treatment is performed with precision, care, and attention to detail, always prioritizing clients' safety and satisfaction.",
-    aboutStoryText3: "At our clinic, you will find a welcoming, private, and extremely clean environment. We believe every client is unique and deserves personalized care, where her needs and desires are heard and met with excellence.",
-    aboutStoryText4: "Dra. Lolla is trained as a biomedical professional and nurse, in addition to having specializations in facial, body, and intimate harmonization, ozone therapy, and several international courses in advanced aesthetics, bringing modern and safe techniques to offer natural, high-quality results to her patients.",
+    aboutStoryText3: "At our clinic, you will find a welcoming, private, and extremely clean environment. We believe every client is unique and deserves personalized care, where her needs and wishes are heard and met with excellence.",
+    aboutStoryText4: "Dra. Lolla is trained as a biomedical professional and nurse, with specializations in facial, body, and intimate harmonization, ozone therapy, and several international courses in advanced aesthetics, bringing modern and safe techniques to offer natural, high-quality results to her patients.",
 
     aboutValuesTitle: "Our Values",
-    aboutValuesSubtitle: "The principles that guide all of our work",
+    aboutValuesSubtitle: "The principles that guide all our work",
     aboutValue1Title: "Humanized Care",
     aboutValue1Desc: "Each client is treated in a unique and special way. Our service is warm, respectful, and personalized.",
     aboutValue2Title: "Safety First",
     aboutValue2Desc: "We use only certified products and proven techniques, ensuring safe and effective results.",
     aboutValue3Title: "Professional Excellence",
-    aboutValue3Desc: "A team constantly updated and trained in the most modern techniques in the aesthetic market.",
+    aboutValue3Desc: "A team constantly updated and trained in the most modern techniques in the aesthetics market.",
     aboutValue4Title: "Commitment to Results",
     aboutValue4Desc: "Client satisfaction is our greatest reward. We work to exceed expectations at every visit.",
 
     aboutQualificationSubtitle: "Qualifications",
     aboutQualificationTitle: "Education and Certifications",
-    aboutQualificationText1: "Dra. Lolla has solid training in aesthetic medicine, with specializations from the country's most renowned institutions. Her journey includes:",
-    aboutQualificationItem1: "Medical Training",
+    aboutQualificationText1: "Dra. Lolla has a solid background in aesthetic medicine, with specializations from the country's most renowned institutions. Her journey includes:",
+    aboutQualificationItem1: "Healthcare Education",
     aboutQualificationItem2: "Specialization in Aesthetics",
     aboutQualificationItem3: "International Certifications",
     aboutQualificationItem4: "Member of Specialized Societies",
-    aboutQualificationText2: "She frequently participates in international congresses and events to stay up to date with the latest techniques and trends in the aesthetic market.",
+    aboutQualificationText2: "She frequently participates in international congresses and events to stay updated on the latest techniques and trends in the aesthetics market.",
 
     aboutFooterService1: "Glute Harmonization",
     aboutFooterService2: "Fillers",
@@ -270,10 +288,9 @@ en: {
     footerContact: "Contact",
     footerAboutUs: "About Us",
     footerAddress: "Rua Barão de Souza Leão, 195<br>Recife - Pernambuco, Brazil",
-    footerDescription: "Aesthetic clinic specialized in glute harmonization and high-quality aesthetic procedures. Your beauty and well-being are our priority.",
+    footerDescription: "An aesthetic clinic specialized in glute harmonization and high-quality aesthetic procedures. Your beauty and well-being are our priority.",
     footerCopyright: "© 2026 Dra. Lolla - Aesthetic Clinic. All rights reserved.",
-    
-    // Location Section
+
     locationTitle: "Our Location",
     locationSubtitle: "Find us easily and come visit our space",
     locationAddressTitle: "Address",
@@ -281,11 +298,12 @@ en: {
     locationHours: "Mon-Fri: 9am-6pm | Sat: 9am-3pm",
 
     popupTitle: "Get in Touch",
-    popupSubtitle: "Leave your phone number or email so we can talk now",
+    popupSubtitle: "Leave your phone number or email so we can contact you right away",
     popupPlaceholder: "Phone Number or Email",
     popupButton: "Send",
     popupWhatsapp: "Chat on WhatsApp",
     popupCloseText: "Close",
+    popupOr: "OR",
 
     alertInvalidContact: "Enter a phone number or email.",
     alertInvalidFormat: "Enter a valid phone number (11 digits) or email.",
@@ -294,7 +312,7 @@ en: {
     alertInvalidPhone: "Please enter the full phone number with area code (11 digits).",
     alertScheduleSuccess: "Thank you for your message! We will contact you soon to confirm your booking.",
     sending: "Sending..."
-    }
+  }
 };
 document.addEventListener('DOMContentLoaded', function() {
     initLanguage();
@@ -308,51 +326,85 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**
  * Idioma
+ * PT = texto original do HTML
+ * EN = traduções do objeto translations.en
  */
 function initLanguage() {
     const savedLang = localStorage.getItem('siteLanguage') || 'pt';
-    applyTranslations(savedLang);
-
     const langButtons = document.querySelectorAll('[data-lang]');
+
+    // Se estiver em inglês salvo, aplica traduções.
+    // Se estiver em português, mantém o HTML original.
+    if (savedLang === 'en') {
+        applyTranslations('en');
+    } else {
+        setPortugueseMode();
+    }
+
     langButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            applyTranslations(lang);
-            localStorage.setItem('siteLanguage', lang);
-
-            langButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-        });
-
         if (button.getAttribute('data-lang') === savedLang) {
             button.classList.add('active');
         }
+
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            if (lang === 'pt') {
+                localStorage.setItem('siteLanguage', 'pt');
+                document.documentElement.lang = 'pt-BR';
+                location.reload();
+                return;
+            }
+
+            applyTranslations('en');
+            localStorage.setItem('siteLanguage', 'en');
+        });
+    });
+}
+
+function setPortugueseMode() {
+    document.documentElement.lang = 'pt-BR';
+
+    const ptTitle = translations?.pt?.pageTitle;
+    if (ptTitle) {
+        document.title = ptTitle;
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(button => {
+        button.classList.toggle('active', button.getAttribute('data-lang') === 'pt');
     });
 }
 
 function applyTranslations(lang) {
-    const dict = translations[lang] || translations.pt;
+    const dict = translations[lang];
+    if (!dict) return;
 
     document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
-    document.title = dict.pageTitle;
+
+    if (dict.pageTitle) {
+        document.title = dict.pageTitle;
+    }
 
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (dict[key]) {
+        if (Object.prototype.hasOwnProperty.call(dict, key)) {
             element.textContent = dict[key];
         }
     });
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
-        if (dict[key]) {
+        if (Object.prototype.hasOwnProperty.call(dict, key)) {
             element.setAttribute('placeholder', dict[key]);
         }
     });
 
     document.querySelectorAll('[data-i18n-html]').forEach(element => {
         const key = element.getAttribute('data-i18n-html');
-        if (dict[key]) {
+        if (Object.prototype.hasOwnProperty.call(dict, key)) {
             element.innerHTML = dict[key];
         }
     });
@@ -364,7 +416,14 @@ function getCurrentLanguage() {
 
 function t(key) {
     const lang = getCurrentLanguage();
-    return translations[lang]?.[key] || translations.pt[key] || key;
+
+    // Se estiver em português, prioriza o objeto pt para alertas e textos dinâmicos.
+    // Se não existir, retorna a chave.
+    if (lang === 'pt') {
+        return translations?.pt?.[key] || key;
+    }
+
+    return translations?.[lang]?.[key] || translations?.pt?.[key] || key;
 }
 
 /**
