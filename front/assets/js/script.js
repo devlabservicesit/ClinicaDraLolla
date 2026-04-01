@@ -132,6 +132,14 @@ const translations = {
     footerAddress: "Rua Barão de Souza Leão, 195<br>Recife - Pernambuco",
     footerDescription: "Clínica de estética especializada em harmonização glútea e procedimentos estéticos de alta qualidade. Sua beleza e bem-estar são nossa prioridade.",
     footerCopyright: "© 2026 Dra. Lolla - Clínica de Estética. Todos os direitos reservados.",
+    
+    // Localização Section
+    locationTitle: "Nossa Localização",
+    locationSubtitle: "Encontre-nos facilmente e venha conhecer nosso espaço",
+    locationAddressTitle: "Endereço",
+    locationExtra: "Boa Viagem, a poucos metros da praia",
+    locationHours: "Seg-Sex: 9h às 18h | Sáb: 9h às 15h"
+
 
     popupTitle: "Entre em Contato",
     popupSubtitle: "Deixe seu número ou email para falarmos agora",
@@ -264,6 +272,14 @@ en: {
     footerAddress: "Rua Barão de Souza Leão, 195<br>Recife - Pernambuco, Brazil",
     footerDescription: "Aesthetic clinic specialized in glute harmonization and high-quality aesthetic procedures. Your beauty and well-being are our priority.",
     footerCopyright: "© 2026 Dra. Lolla - Aesthetic Clinic. All rights reserved.",
+    
+    // Location Section
+    locationTitle: "Our Location",
+    locationSubtitle: "Find us easily and come visit our space",
+    locationAddressTitle: "Address",
+    locationExtra: "Boa Viagem, just steps from the beach",
+    locationHours: "Mon-Fri: 9am-6pm | Sat: 9am-3pm"
+
 
     popupTitle: "Get in Touch",
     popupSubtitle: "Leave your phone number or email so we can talk now",
