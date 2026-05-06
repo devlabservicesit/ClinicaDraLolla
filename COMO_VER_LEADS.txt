@@ -1,0 +1,38 @@
+O QUE FOI CORRIGIDO
+
+Antes, os formulários do site não enviavam os dados para lugar nenhum.
+Eles apenas mostravam uma mensagem de sucesso e apagavam o formulário.
+
+Agora foram criadas rotas no backend para salvar os contatos:
+
+1) Popup de contato:
+POST /api/leads
+Salva em: data/leads.json
+
+2) Formulário de agendamento:
+POST /api/agendamentos
+Salva em: data/agendamentos.json
+
+COMO VER OS LEADS
+
+1. Na Railway, crie uma variável de ambiente chamada:
+ADMIN_TOKEN
+
+Exemplo de valor:
+minhaSenhaForte123
+
+2. Faça o deploy novamente.
+
+3. Acesse:
+https://SEU-DOMINIO/admin-leads.html
+
+4. Digite o token que você colocou em ADMIN_TOKEN.
+
+IMPORTANTE
+
+Esse método salva em arquivos JSON dentro do servidor.
+Funciona para teste e uso simples, mas em produção o ideal é salvar em banco de dados,
+Google Sheets, Supabase, Firebase ou enviar para um CRM.
+
+Em hospedagens como Railway, arquivos locais podem ser perdidos em redeploy/restart dependendo da configuração.
+Para não perder leads, o melhor próximo passo é integrar com banco de dados ou Google Sheets.

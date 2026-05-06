@@ -504,16 +504,33 @@ function initPopup() {
             btn.classList.add('btn-loading');
             btn.disabled = true;
             
-            setTimeout(() => {
-                alert(t('alertPopupSuccess'));
+            fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contact: value,
+                    page: window.location.pathname,
+                    source: 'popup_contato'
+                })
+            })
+            .then(async (response) => {
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || !result.ok) {
+                    throw new Error(result.message || 'Erro ao enviar contato.');
+                }
 
+                alert(t('alertPopupSuccess'));
                 form.reset();
                 closePopup();
-                
+            })
+            .catch((error) => {
+                alert(error.message || 'Não foi possível enviar agora. Tente novamente.');
+            })
+            .finally(() => {
                 btn.innerHTML = originalContent;
                 btn.classList.remove('btn-loading');
                 btn.disabled = false;
-            }, 1500);
+            });
         });
     }
 }
@@ -585,32 +602,32 @@ function initFormSubmission() {
             btn.classList.add('btn-loading');
             btn.disabled = true;
 
-            const mensagem = `
-*Nova solicitação de agendamento*
+            fetch('/api/agendamentos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...data,
+                    page: window.location.pathname,
+                    source: 'formulario_agendamento'
+                })
+            })
+            .then(async (response) => {
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || !result.ok) {
+                    throw new Error(result.message || 'Erro ao enviar agendamento.');
+                }
 
-*Nome:* ${data.nome}
-*Telefone:* ${data.telefone}
-*E-mail:* ${data.email}
-*Serviço:* ${data.servico}
-*Data preferencial:* ${data.data || 'A combinar'}
-*Horário:* ${data.horario || 'A combinar'}
-*Mensagem:* ${data.mensagem || 'Sem mensagem adicional'}
-            `;
-            
-            const mensagemEncode = encodeURIComponent(mensagem);
-            const telefoneWhatsApp = '5511999999999';
-            
-            // window.open(`https://wa.me/${telefoneWhatsApp}?text=${mensagemEncode}`, '_blank');
-            console.log(mensagemEncode);
-
-            setTimeout(() => {
                 alert(t('alertScheduleSuccess'));
-                
                 form.reset();
+            })
+            .catch((error) => {
+                alert(error.message || 'Não foi possível enviar agora. Tente novamente.');
+            })
+            .finally(() => {
                 btn.innerHTML = originalContent;
                 btn.classList.remove('btn-loading');
                 btn.disabled = false;
-            }, 2000);
+            });
         });
     }
 }
@@ -651,7 +668,7 @@ function initSmoothScroll() {
 function initWhatsAppFloat() {
     /*
     const whatsappBtn = document.createElement('a');
-    whatsappBtn.href = 'https://wa.me/5511999999999';
+    whatsappBtn.href = 'https://wa.me/558187972520';
     whatsappBtn.className = 'whatsapp-float';
     whatsappBtn.target = '_blank';
     whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
